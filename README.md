@@ -76,7 +76,7 @@ here is an example:
 
 ### Examples
 
-[Examples on Github Pages]()
+[Examples on Github Pages](https://zaticpetru.github.io/reusable-web-components/)
 
 ![](screenshots/border-3d-examples.png)
 
