@@ -38,6 +38,10 @@
           --angle: 360deg;
         }
       }
+      .ok {
+        scale: 0.8;
+      }
+
     </style>
   </head>
   <body>
@@ -47,7 +51,7 @@
         <div class="description">Default styling, no customisation</div>
         <div class="example">
           <div is="border-3d">
-            <img src="https://picsum.photos/200" />
+            <img src="img/ok.png" class="ok" />
           </div>
         </div>
       </div>
@@ -57,7 +61,7 @@
           <div is="border-3d" size="sm">
             <p>Small</p>
           </div>
-          <div is="border-3d" size="md">
+          <div is="border-3d" size="md" >
             <p>Medium</p>
           </div>
           <div is="border-3d" size="lg">
@@ -108,6 +112,16 @@
       </div>
 
       <div class="example-container">
+        <div class="example">
+          <div
+            brand="hsl(15 70% 35%)"
+            class="custom-circle"
+            is="border-3d"
+            disable-visual-centering
+          >
+            <img src="https://picsum.photos/id/765/200/100" alt="paper-image" />
+          </div>
+        </div>
         <div class="description">
           <p>
             By defining a CSS property <strong>--angle</strong> we can then
@@ -116,19 +130,12 @@
           <br />
           <p>
             For smother animations, visual centering should be disabled by
-            adding <strong>diable-visual-centering</strong> attribute
+            adding <strong>disable-visual-centering</strong> attribute
           </p>
         </div>
-        <div class="example">
-          <div
-            brand="hsl(15 70% 35%)"
-            class="custom-circle"
-            is="border-3d"
-            diable-visual-centering
-          >
-            <img src="https://picsum.photos/id/765/200/100" alt="paper-image" />
-          </div>
-        </div>
+      </div>
+      <div>
+        <a href="https://www.flaticon.com/free-icons/ok" title="ok icons">Ok icons created by Freepik - Flaticon</a>
       </div>
     </div>
 

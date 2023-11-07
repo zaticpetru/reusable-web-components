@@ -30,8 +30,8 @@ template.innerHTML = /*html*/ `
     }
 
     :host {
-      --brand-h: 185;
-      --brand-s: 70%;
+      --brand-h: 190;
+      --brand-s: 90%;
       --brand-l: 45%;
 
       --brand: hsl(var(--brand-h) var(--brand-s) var(--brand-l));
@@ -147,7 +147,7 @@ export default class Border3D extends HTMLDivElement {
       this.size = "md";
     }
 
-    if (this.hasAttribute("diable-visual-centering") && this.getAttribute("diable-visual-centering") != "false") {
+    if (this.hasAttribute("disable-visual-centering") && this.getAttribute("disable-visual-centering") != "false") {
       this.container.classList.remove("visual-centering");
     }
   }

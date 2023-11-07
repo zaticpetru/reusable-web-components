@@ -23,10 +23,10 @@ The component can be customised by adding attributes or by defining CSS variable
 
 | Name          | Description   | Values  | Default  |
 | ------------- | ------------- | ------- | -------- |
-| `brand` | main color used  | valid hsl | `hsl(185 70% 45%)`
+| `brand` | main color used  | valid hsl | `hsl(190 90% 45%)`
 | `size` | predefined size  | only: `sm`, `md` or `lg` | `md` |
 | *`angle` | angle of "light"  | valid css angle |  `45deg` |
-| *`diable-visual-centering` | removes padding centering, useful when animating angles  | boolean | `false`
+| *`disable-visual-centering` | removes padding centering, useful when animating angles  | boolean | `false`
 
 
 > `angle` - will affect the position of shadows and gradient direction
