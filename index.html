@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Action circle web component demos</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .action-circle {
+        --border-radius: 50%;
+        --inner-border-radius: 50%;
+        --padding: 0rem;
+        --aspect-ratio: 1;
+      }
+      .action-circle > img {
+        padding: 1rem;
+      }
+
+      .custom-circle {
+        --border-width: 1rem;
+        --border-radius: 10rem;
+
+        --inner-border-radius: 5rem;
+        --padding: 0.5rem;
+        --shadow-strength: 0.7;
+
+        animation-name: angleChange;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes angleChange {
+        from {
+          --angle: 0deg;
+        }
+        to {
+          --angle: 360deg;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>3D Border examples:</h1>
+      <div class="example-container">
+        <div class="description">Default styling, no customisation</div>
+        <div class="example">
+          <div is="border-3d">
+            <img src="https://picsum.photos/200" />
+          </div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div class="example">
+          <div is="border-3d" size="sm">
+            <p>Small</p>
+          </div>
+          <div is="border-3d" size="md">
+            <p>Medium</p>
+          </div>
+          <div is="border-3d" size="lg">
+            <p>Large</p>
+          </div>
+        </div>
+        <div class="description">Size comparision sm, md and lg</div>
+      </div>
+
+      <div class="example-container">
+        <div class="description">
+          <p>
+            Creatig circles using custom <strong>--border-radius</strong> and
+            <strong>--inner-border-radius</strong> values of CSS variables set
+            on .action-circle class
+          </p>
+          <br />
+          <p>
+            Also using <strong>brand</strong> attribute to set custom colors
+          </p>
+        </div>
+        <div class="example">
+          <div
+            is="border-3d"
+            angle="230deg"
+            brand="hsl(230, 89%, 62%)"
+            class="action-circle"
+          >
+            <img src="/img/icon-paper.svg" alt="paper" />
+          </div>
+          <div
+            is="border-3d"
+            angle="120deg"
+            brand="hsl(349, 71%, 52%)"
+            class="action-circle"
+          >
+            <img src="/img/icon-rock.svg" alt="rock" />
+          </div>
+          <div
+            is="border-3d"
+            angle="-30deg"
+            brand="hsl(39, 89%, 49%)"
+            class="action-circle"
+          >
+            <img src="/img/icon-scissors.svg" alt="scissors" />
+          </div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <div class="description">
+          <p>
+            By defining a CSS property <strong>--angle</strong> we can then
+            animate it.
+          </p>
+          <br />
+          <p>
+            For smother animations, visual centering should be disabled by
+            adding <strong>diable-visual-centering</strong> attribute
+          </p>
+        </div>
+        <div class="example">
+          <div
+            brand="hsl(15 70% 35%)"
+            class="custom-circle"
+            is="border-3d"
+            diable-visual-centering
+          >
+            <img src="https://picsum.photos/id/765/200/100" alt="paper-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+    <script type="module" src="./border-3d.js"></script>
+  </body>
+</html>
